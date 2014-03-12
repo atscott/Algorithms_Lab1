@@ -29,10 +29,9 @@ public class sortRunner
   private static int[] getRandomListOfNumbers(int numbersToGenerate)
   {
     int[] numbers = new int[numbersToGenerate];
-    Random rand = new Random();
     for (int i = 0; i < numbersToGenerate; i++)
     {
-      numbers[i] = rand.nextInt();
+      numbers[i] = (int) (Math.random() * 1000);
     }
     return numbers;
   }

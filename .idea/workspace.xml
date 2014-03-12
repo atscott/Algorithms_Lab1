@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca78759-db27-4969-b768-bdd09de85a48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/InsertionSort.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/MergeSort.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/NumberSorter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scottat/sortRunner.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lab1.iml" afterPath="$PROJECT_DIR$/Lab1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scottat/sortRunner.java" afterPath="$PROJECT_DIR$/src/main/java/scottat/sortRunner.java" />
     </list>
     <ignored path="Lab1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,7 +96,7 @@
       <file leaf-file-name="sortRunner.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/scottat/sortRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="52" selection-start="413" selection-end="413" vertical-scroll-proportion="0.4646643" vertical-offset="97" max-vertical-offset="990">
+            <state line="31" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.6236749" vertical-offset="205" max-vertical-offset="972">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -586,12 +577,12 @@
       <created>1394648053584</created>
       <updated>1394648053584</updated>
       <workItem from="1394648057279" duration="1207000" />
-      <workItem from="1394649265439" duration="2821000" />
+      <workItem from="1394649265439" duration="3375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4028000" />
+    <option name="totallyTimeSpent" value="4582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1055" extended-state="0" />
@@ -706,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scottat/sortRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="413" selection-end="413" vertical-scroll-proportion="0.4646643" vertical-offset="97" max-vertical-offset="990">
+        <state line="31" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.6236749" vertical-offset="205" max-vertical-offset="972">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
