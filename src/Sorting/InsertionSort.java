@@ -10,7 +10,7 @@ import java.util.List;
 public class InsertionSort implements NumberSorter
 {
   @Override
-  public Integer[] Sort(Integer[] listOfNumbers)
+  public int[] Sort(int[] listOfNumbers)
   {
     for (int j = 2; j < listOfNumbers.length; j++)
     {
