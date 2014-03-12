@@ -12,12 +12,11 @@ public class MergeSort implements NumberSorter
   private int[] helper;
 
   @Override
-  public int[] Sort(int[] values) {
+  public void Sort(int[] values) {
     numbers = values;
     int number = values.length;
     helper = new int[number];
     mergesort(0, number - 1);
-    return numbers;
   }
 
   private void mergesort(int low, int high) {

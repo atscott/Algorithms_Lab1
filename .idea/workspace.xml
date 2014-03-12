@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca78759-db27-4969-b768-bdd09de85a48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sorting/MergeSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scottat/sortRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sorting/InsertionSort.java" afterPath="$PROJECT_DIR$/src/Sorting/InsertionSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sorting/NumberSorter.java" afterPath="$PROJECT_DIR$/src/Sorting/NumberSorter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/InsertionSort.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/MergeSort.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sorting/NumberSorter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scottat/sortRunner.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lab1.iml" afterPath="$PROJECT_DIR$/Lab1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab1.iws" />
@@ -73,36 +76,47 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="NumberSorter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Sorting/NumberSorter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/NumberSorter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+            <state line="11" column="12" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="InsertionSort.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Sorting/InsertionSort.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/InsertionSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="20" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+            <state line="18" column="11" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeSort.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Sorting/MergeSort.java">
+      <file leaf-file-name="MergeSort.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="415" selection-end="415" vertical-scroll-proportion="0.38042268" vertical-offset="0" max-vertical-offset="1278">
+            <state line="19" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sortRunner.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scottat/sortRunner.java">
+      <file leaf-file-name="sortRunner.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/scottat/sortRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="648">
+            <state line="20" column="52" selection-start="413" selection-end="413" vertical-scroll-proportion="0.4646643" vertical-offset="97" max-vertical-offset="990">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="20" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
               <folding />
             </state>
           </provider>
@@ -122,12 +136,24 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/Sorting/IntegerSorter.java" />
-        <option value="$PROJECT_DIR$/src/scottat/sortRunner.java" />
         <option value="$PROJECT_DIR$/src/Sorting/InsertionSort.java" />
         <option value="$PROJECT_DIR$/src/Sorting/Sorter.java" />
         <option value="$PROJECT_DIR$/src/Sorting/NumberSorter.java" />
         <option value="$PROJECT_DIR$/src/Sorting/MergeSort.java" />
+        <option value="$PROJECT_DIR$/src/scottat/sortRunner.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Sorting/NumberSorter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sorting/MergeSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sorting/InsertionSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scottat/sortRunner.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -194,6 +220,46 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Sorting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -210,6 +276,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,8 +306,38 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.sortRunner">
+    <configuration default="false" name="sortRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="scottat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="scottat.sortRunner" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Lab1" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -445,7 +549,14 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.sortRunner" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.sortRunner" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -475,12 +586,12 @@
       <created>1394648053584</created>
       <updated>1394648053584</updated>
       <workItem from="1394648057279" duration="1207000" />
-      <workItem from="1394649265439" duration="1211000" />
+      <workItem from="1394649265439" duration="2821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2418000" />
+    <option name="totallyTimeSpent" value="4028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1055" extended-state="0" />
@@ -494,19 +605,20 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24232456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -529,60 +641,75 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Sorting/NumberSorter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/NumberSorter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="22" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="342">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/InsertionSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/InsertionSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/MergeSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="39" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scottat/sortRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scottat/sortRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="648">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scottat/sortRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/NumberSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+        <state line="11" column="12" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/NumberSorter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+        <state line="19" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/InsertionSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sorting/InsertionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="18" column="11" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/MergeSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scottat/sortRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="415" selection-end="415" vertical-scroll-proportion="0.38042268" vertical-offset="0" max-vertical-offset="1278">
-          <folding />
+        <state line="20" column="52" selection-start="413" selection-end="413" vertical-scroll-proportion="0.4646643" vertical-offset="97" max-vertical-offset="990">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

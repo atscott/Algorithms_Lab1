@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface NumberSorter
 {
-  public int[] Sort(int[] listOfNumbers);
+  public void Sort(int[] listOfNumbers);
 }
