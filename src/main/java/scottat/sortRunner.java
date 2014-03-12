@@ -40,9 +40,10 @@ public class sortRunner
   {
     int[] copy = new int[numbersToSort.length];
     System.arraycopy(numbersToSort, 0, copy, 0, numbersToSort.length);
-    long start = new Date().getTime();
+    long start = System.currentTimeMillis();
     sorter.Sort(copy);
-    return new Date().getTime() - start;
+    long end = System.currentTimeMillis();
+    return end - start;
   }
 
 }
