@@ -1,13 +1,11 @@
 package scottat;
 
 import Sorting.*;
-import com.google.common.base.Joiner;
-import com.google.common.primitives.Ints;
-import com.sun.deploy.util.StringUtils;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Random;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * User: atscott
@@ -16,13 +14,24 @@ import java.util.Random;
  */
 public class sortRunner
 {
-  public static void main(String args[])
+  private static int[] numbersToGenerate = new int[]{100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,
+      1000000};
+  private static final String resultFileName = "results.csv";
+
+  public static void main(String args[]) throws IOException
   {
-    int[] someNumbers = getRandomListOfNumbers(100000);
-    NumberSorter mergeSorter = new MergeSort();
-    NumberSorter insertionSorter = new InsertionSort();
-    System.out.println("" + benchmarkSort(mergeSorter, someNumbers));
-    System.out.println("" + benchmarkSort(insertionSorter, someNumbers));
+    writeCsvHeader();
+    for (int number : numbersToGenerate)
+    {
+      int[] someNumbers = getRandomListOfNumbers(number);
+      NumberSorter mergeSorter = new MergeSort();
+      NumberSorter insertionSorter = new InsertionSort();
+      NumberSorter miSorter = new MergeInsertionSort();
+      long mergeTime = benchmarkSort(mergeSorter, someNumbers);
+      long insertionTime = benchmarkSort(insertionSorter, someNumbers);
+      long miTime = benchmarkSort(miSorter, someNumbers);
+      writeResultsToFile(number, mergeTime, insertionTime, miTime);
+    }
 
   }
 
@@ -44,6 +53,26 @@ public class sortRunner
     sorter.Sort(copy);
     long end = System.currentTimeMillis();
     return end - start;
+  }
+
+  private static void writeResultsToFile(int numbers, long mergeTime, long insertionTime, long mergeInsertionTime) throws IOException
+  {
+    File file = new File(resultFileName);
+    FileWriter fileWriter = new FileWriter(file, true);
+    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+    fileWriter.append("\n");
+    String dataLine = numbers + "," + mergeTime + "," + insertionTime + "," + mergeInsertionTime;
+    fileWriter.append(dataLine);
+    bufferedWriter.close();
+  }
+
+  private static void writeCsvHeader() throws IOException
+  {
+    File file = new File(resultFileName);
+    FileWriter fileWriter = new FileWriter(file, false);
+    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+    fileWriter.write("numbers sorted, merge sort time, insertion sort time, merge-insertion sort time");
+    bufferedWriter.close();
   }
 
 }
