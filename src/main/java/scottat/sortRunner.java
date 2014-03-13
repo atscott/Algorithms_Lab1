@@ -69,6 +69,8 @@ public class sortRunner
   private static void writeCsvHeader() throws IOException
   {
     File file = new File(resultFileName);
+    if(file.exists())
+      return;
     FileWriter fileWriter = new FileWriter(file, false);
     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
     fileWriter.write("numbers sorted, merge sort time (ms), insertion sort time (ms), merge-insertion sort time (ms)");
