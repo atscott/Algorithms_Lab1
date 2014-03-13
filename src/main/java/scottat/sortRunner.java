@@ -71,7 +71,7 @@ public class sortRunner
     File file = new File(resultFileName);
     FileWriter fileWriter = new FileWriter(file, false);
     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-    fileWriter.write("numbers sorted, merge sort time, insertion sort time, merge-insertion sort time");
+    fileWriter.write("numbers sorted, merge sort time (ms), insertion sort time (ms), merge-insertion sort time (ms)");
     bufferedWriter.close();
   }
 
