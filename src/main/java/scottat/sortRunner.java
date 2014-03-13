@@ -20,6 +20,9 @@ public class sortRunner
   private static final String lowFileName = "resultsUnder1000.csv";
   private static final String highFileName = "resultsOver1000.csv";
   private static final String combinedFileName = "resultsAll.csv";
+  private static CsvFileWriter lowResultWriter = new CsvFileWriter(lowFileName);
+  private static CsvFileWriter highResultWriter = new CsvFileWriter(highFileName);
+  private static CsvFileWriter combinedResultWriter = new CsvFileWriter(combinedFileName);
 
   private static void getListOfHowManyNumbersToGenerate()
   {
@@ -35,37 +38,32 @@ public class sortRunner
 
   public static void main(String args[]) throws IOException
   {
+    NumberGenerator gen = new NumberGenerator();
     getListOfHowManyNumbersToGenerate();
-    writeCsvHeader(lowFileName);
-    writeCsvHeader(highFileName);
-    writeCsvHeader(combinedFileName);
-    for (int number : numbersToGenerate)
+    String[] header = {"numbers sorted", "merge sort time (ns)", "insertion sort time (ns)", "merge-insertion sort time (ns)"};
+    lowResultWriter.WriteHeader(header);
+    highResultWriter.WriteHeader(header);
+    combinedResultWriter.WriteHeader(header);
+    for (Integer number : numbersToGenerate)
     {
-      int[] someNumbers = getRandomListOfNumbers(number);
+      int[] someNumbers = gen.GetRandomListOfNumbers(number);
       NumberSorter mergeSorter = new MergeSort();
       NumberSorter insertionSorter = new InsertionSort();
       NumberSorter miSorter = new MergeInsertionSort();
-      long mergeTime = benchmarkSort(mergeSorter, someNumbers);
-      long insertionTime = benchmarkSort(insertionSorter, someNumbers);
-      long miTime = benchmarkSort(miSorter, someNumbers);
-      if(number < 1000){
-        writeResultsToFile(lowFileName, number, mergeTime, insertionTime, miTime);
-      }else{
-        writeResultsToFile(highFileName, number, mergeTime, insertionTime, miTime);
+      Long mergeTime = benchmarkSort(mergeSorter, someNumbers);
+      Long insertionTime = benchmarkSort(insertionSorter, someNumbers);
+      Long miTime = benchmarkSort(miSorter, someNumbers);
+      String[] results = {number.toString(), mergeTime.toString(), insertionTime.toString(), miTime.toString()};
+      if (number < 1000)
+      {
+        lowResultWriter.WriteResults(results);
+      } else
+      {
+        highResultWriter.WriteResults(results);
       }
-      writeResultsToFile(combinedFileName, number, mergeTime, insertionTime, miTime);
+      combinedResultWriter.WriteResults(results);
     }
 
-  }
-
-  private static int[] getRandomListOfNumbers(int numbersToGenerate)
-  {
-    int[] numbers = new int[numbersToGenerate];
-    for (int i = 0; i < numbersToGenerate; i++)
-    {
-      numbers[i] = (int) (Math.random() * 1000);
-    }
-    return numbers;
   }
 
   private static long benchmarkSort(NumberSorter sorter, int[] numbersToSort)
@@ -76,28 +74,6 @@ public class sortRunner
     sorter.Sort(copy);
     long end = System.nanoTime();
     return end - start;
-  }
-
-  private static void writeResultsToFile(String resultFileName, int numbers, long mergeTime, long insertionTime, long mergeInsertionTime) throws IOException
-  {
-    File file = new File(resultFileName);
-    FileWriter fileWriter = new FileWriter(file, true);
-    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-    fileWriter.append("\n");
-    String dataLine = numbers + "," + mergeTime + "," + insertionTime + "," + mergeInsertionTime;
-    fileWriter.append(dataLine);
-    bufferedWriter.close();
-  }
-
-  private static void writeCsvHeader(String resultFileName) throws IOException
-  {
-    File file = new File(resultFileName);
-    if (file.exists())
-      return;
-    FileWriter fileWriter = new FileWriter(file, false);
-    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-    fileWriter.write("numbers sorted, merge sort time (ns), insertion sort time (ns), merge-insertion sort time (ns)");
-    bufferedWriter.close();
   }
 
 }
