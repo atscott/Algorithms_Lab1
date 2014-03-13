@@ -6,6 +6,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: atscott
@@ -14,13 +16,29 @@ import java.io.IOException;
  */
 public class sortRunner
 {
-  private static int[] numbersToGenerate = new int[]{100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,
-      1000000};
-  private static final String resultFileName = "results.csv";
+  private static List<Integer> numbersToGenerate = new ArrayList<>();
+  private static final String lowFileName = "resultsUnder1000.csv";
+  private static final String highFileName = "resultsOver1000.csv";
+  private static final String combinedFileName = "resultsAll.csv";
+
+  private static void getListOfHowManyNumbersToGenerate()
+  {
+    for (int i = 200; i < 2000; i += 10)
+    {
+      numbersToGenerate.add(i);
+    }
+    for (int i = 2000; i < 2000000; i *= 2)
+    {
+      numbersToGenerate.add(i);
+    }
+  }
 
   public static void main(String args[]) throws IOException
   {
-    writeCsvHeader();
+    getListOfHowManyNumbersToGenerate();
+    writeCsvHeader(lowFileName);
+    writeCsvHeader(highFileName);
+    writeCsvHeader(combinedFileName);
     for (int number : numbersToGenerate)
     {
       int[] someNumbers = getRandomListOfNumbers(number);
@@ -30,7 +48,12 @@ public class sortRunner
       long mergeTime = benchmarkSort(mergeSorter, someNumbers);
       long insertionTime = benchmarkSort(insertionSorter, someNumbers);
       long miTime = benchmarkSort(miSorter, someNumbers);
-      writeResultsToFile(number, mergeTime, insertionTime, miTime);
+      if(number < 1000){
+        writeResultsToFile(lowFileName, number, mergeTime, insertionTime, miTime);
+      }else{
+        writeResultsToFile(highFileName, number, mergeTime, insertionTime, miTime);
+      }
+      writeResultsToFile(combinedFileName, number, mergeTime, insertionTime, miTime);
     }
 
   }
@@ -49,13 +72,13 @@ public class sortRunner
   {
     int[] copy = new int[numbersToSort.length];
     System.arraycopy(numbersToSort, 0, copy, 0, numbersToSort.length);
-    long start = System.currentTimeMillis();
+    long start = System.nanoTime();
     sorter.Sort(copy);
-    long end = System.currentTimeMillis();
+    long end = System.nanoTime();
     return end - start;
   }
 
-  private static void writeResultsToFile(int numbers, long mergeTime, long insertionTime, long mergeInsertionTime) throws IOException
+  private static void writeResultsToFile(String resultFileName, int numbers, long mergeTime, long insertionTime, long mergeInsertionTime) throws IOException
   {
     File file = new File(resultFileName);
     FileWriter fileWriter = new FileWriter(file, true);
@@ -66,14 +89,14 @@ public class sortRunner
     bufferedWriter.close();
   }
 
-  private static void writeCsvHeader() throws IOException
+  private static void writeCsvHeader(String resultFileName) throws IOException
   {
     File file = new File(resultFileName);
-    if(file.exists())
+    if (file.exists())
       return;
     FileWriter fileWriter = new FileWriter(file, false);
     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-    fileWriter.write("numbers sorted, merge sort time (ms), insertion sort time (ms), merge-insertion sort time (ms)");
+    fileWriter.write("numbers sorted, merge sort time (ns), insertion sort time (ns), merge-insertion sort time (ns)");
     bufferedWriter.close();
   }
 

@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Arrays;
+
 /**
  * User: atscott
  * Date: 3/12/14
@@ -8,57 +10,65 @@ package Sorting;
  */
 public class MergeSort implements NumberSorter
 {
-  private int[] numbers;
-  private int[] helper;
+  public void Sort(int[] listOfNumbers)
+  {
+    if (listOfNumbers.length > 1)
+    {
 
-  @Override
-  public void Sort(int[] values) {
-    numbers = values;
-    int number = values.length;
-    helper = new int[number];
-    mergesort(0, number - 1);
-  }
+      int q = listOfNumbers.length / 2;
 
-  private void mergesort(int low, int high) {
-    // check if low is smaller then high, if not then the array is sorted
-    if (low < high) {
-      // Get the index of the element which is in the middle
-      int middle = low + (high - low) / 2;
-      // Sort the left side of the array
-      mergesort(low, middle);
-      // Sort the right side of the array
-      mergesort(middle + 1, high);
-      // Combine them both
-      merge(low, middle, high);
+      int[] leftArray = Arrays.copyOfRange(listOfNumbers, 0, q);
+      int[] rightArray = Arrays.copyOfRange(listOfNumbers, q, listOfNumbers.length);
+
+      Sort(leftArray);
+      Sort(rightArray);
+
+      merge(listOfNumbers, leftArray, rightArray);
     }
   }
 
-  private void merge(int low, int middle, int high) {
-
-    // Copy both parts into the helper array
-    System.arraycopy(numbers, low, helper, low, high + 1 - low);
-
-    int i = low;
-    int j = middle + 1;
-    int k = low;
-    // Copy the smallest values from either the left or the right side back
-    // to the original array
-    while (i <= middle && j <= high) {
-      if (helper[i] <= helper[j]) {
-        numbers[k] = helper[i];
-        i++;
-      } else {
-        numbers[k] = helper[j];
-        j++;
+  private void merge(int[] a, int[] l, int[] r)
+  {
+    int totElem = l.length + r.length;
+    //int[] a = new int[totElem];
+    int i, li, ri;
+    i = li = ri = 0;
+    while (i < totElem)
+    {
+      if ((li < l.length) && (ri < r.length))
+      {
+        if (l[li] < r[ri])
+        {
+          a[i] = l[li];
+          i++;
+          li++;
+        } else
+        {
+          a[i] = r[ri];
+          i++;
+          ri++;
+        }
+      } else
+      {
+        if (li >= l.length)
+        {
+          while (ri < r.length)
+          {
+            a[i] = r[ri];
+            i++;
+            ri++;
+          }
+        }
+        if (ri >= r.length)
+        {
+          while (li < l.length)
+          {
+            a[i] = l[li];
+            li++;
+            i++;
+          }
+        }
       }
-      k++;
     }
-    // Copy the rest of the left side of the array into the target array
-    while (i <= middle) {
-      numbers[k] = helper[i];
-      k++;
-      i++;
-    }
-
   }
 }
