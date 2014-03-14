@@ -30,7 +30,7 @@ public class NumberGenerator
   public int[] GetNumbersInOrderDesc(int numbersToGenerate)
   {
     int[] numbers = new int[numbersToGenerate];
-    for (int i = numbersToGenerate; i > 0; i--)
+    for (int i = numbersToGenerate-1; i >= 0; i--)
     {
       numbers[i] = i;
     }
