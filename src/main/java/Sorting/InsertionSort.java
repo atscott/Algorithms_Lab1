@@ -1,6 +1,5 @@
 package Sorting;
 
-import java.util.List;
 
 /**
  * User: atscott
@@ -13,15 +12,20 @@ public class InsertionSort implements NumberSorter
   public void Sort(int[] listOfNumbers)
   {
 
-    for (int j = 1; j < listOfNumbers.length; j++)
+    int temp;
+    int pos;
+
+    for (int i = 1; i < listOfNumbers.length; i++)
     {
-      int key = listOfNumbers[j];
-      int i;
-      for (i = j - 1; (i >= 0) && (listOfNumbers[i] < key); i--)
+      temp = listOfNumbers[i];
+      pos = i - 1;
+
+      while ((pos >= 0) && (temp < listOfNumbers [pos]))
       {
-        listOfNumbers[i + 1] = listOfNumbers[i];
+        listOfNumbers[pos + 1] = listOfNumbers[pos];
+        pos--;
       }
-      listOfNumbers[i + 1] = key;
+      listOfNumbers[pos + 1] = temp;
     }
   }
 }
