@@ -30,9 +30,9 @@ public class NumberGenerator
   public int[] GetNumbersInOrderDesc(int numbersToGenerate)
   {
     int[] numbers = new int[numbersToGenerate];
-    for (int i = numbersToGenerate-1; i >= 0; i--)
+    for (int i = 0; i < numbersToGenerate; i++)
     {
-      numbers[i] = i;
+      numbers[i] = numbersToGenerate-i;
     }
     return numbers;
   }
