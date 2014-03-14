@@ -40,7 +40,11 @@ public class sortRunner
     {
       numbersToGenerate.add(i);
     }
-    for (int i = 2000; i < 2000000; i *= 2)
+    for (int i = 2000; i < 200000; i *= 2)
+    {
+      numbersToGenerate.add(i);
+    }
+    for (int i = 200000; i <= 1000000; i += 100000)
     {
       numbersToGenerate.add(i);
     }
