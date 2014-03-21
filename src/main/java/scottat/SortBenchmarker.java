@@ -1,9 +1,6 @@
 package scottat;
 
-import Sorting.InsertionSort;
-import Sorting.MergeInsertionSort;
-import Sorting.MergeSort;
-import Sorting.NumberSorter;
+import Sorting.*;
 
 import java.io.IOException;
 
@@ -23,23 +20,19 @@ public class SortBenchmarker
     lowResultWriter = new CsvFileWriter(lowEndFileName);
     highResultWriter = new CsvFileWriter(highEndFileName);
     combinedResultWriter = new CsvFileWriter(combinedFileName);
-
   }
 
   public void benchmarkAllSorts(int[] someNumbers) throws IOException
   {
     WriteHeaderForResultFiles();
-    NumberSorter mergeSorter = new MergeSort();
-    NumberSorter insertionSorter = new InsertionSort();
-    NumberSorter miSorter = new MergeInsertionSort();
-    Long mergeTime = benchmarkSort(mergeSorter, someNumbers);
-    Long insertionTime = benchmarkSort(insertionSorter, someNumbers);
-    Long miTime = benchmarkSort(miSorter, someNumbers);
-    String[] results = {"" + someNumbers.length, mergeTime.toString(), insertionTime.toString(), miTime.toString()};
+    NumberSorter bubbleSorter = new BubbleSort();
+    Long bubbleTime = benchmarkSort(bubbleSorter, someNumbers);
+    String[] results = {"" + someNumbers.length, bubbleTime.toString()};
     if (someNumbers.length < 1000)
     {
       lowResultWriter.WriteResults(results);
-    } else
+    }
+    else
     {
       highResultWriter.WriteResults(results);
     }
@@ -48,7 +41,7 @@ public class SortBenchmarker
 
   private void WriteHeaderForResultFiles() throws IOException
   {
-    String[] header = {"numbers sorted", "merge sort time (ns)", "insertion sort time (ns)", "merge-insertion sort time (ns)"};
+    String[] header = {"numbers sorted", "bubble sort time (ns)"};
     lowResultWriter.WriteHeader(header);
     highResultWriter.WriteHeader(header);
     combinedResultWriter.WriteHeader(header);
