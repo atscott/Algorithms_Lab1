@@ -19,9 +19,9 @@ public class sortRunner
   {
     NumberGenerator gen = new NumberGenerator();
     getListOfHowManyNumbersToGenerate();
-    SortBenchmarker randomBenchmarker = new SortBenchmarker("RandomResultsUnder1000.csv", "RandomResultsOver1000.csv", "RandomResultsAll.csv");
-    SortBenchmarker worstBenchmarker = new SortBenchmarker("WorstResultsUnder1000.csv", "WorstResultsOver1000.csv", "WorstResultsAll.csv");
-    SortBenchmarker bestBenchmarker = new SortBenchmarker("BestResultsUnder1000.csv", "BestResultsOver1000.csv", "BestResultsAll.csv");
+    SortBenchmarker randomBenchmarker = new SortBenchmarker("RandomResultsAll.csv");
+    SortBenchmarker worstBenchmarker = new SortBenchmarker("WorstResultsAll.csv");
+    SortBenchmarker bestBenchmarker = new SortBenchmarker("BestResultsAll.csv");
     for (Integer number : numbersToGenerate)
     {
       int[] randomListOfNumbers = gen.GetRandomListOfNumbers(number);

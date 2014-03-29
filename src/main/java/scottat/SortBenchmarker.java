@@ -11,15 +11,11 @@ import java.io.IOException;
  */
 public class SortBenchmarker
 {
-  private CsvFileWriter lowResultWriter;
-  private CsvFileWriter highResultWriter;
   private CsvFileWriter combinedResultWriter;
 
-  public SortBenchmarker(String lowEndFileName, String highEndFileName, String combinedFileName)
+  public SortBenchmarker(String outputFile)
   {
-    lowResultWriter = new CsvFileWriter(lowEndFileName);
-    highResultWriter = new CsvFileWriter(highEndFileName);
-    combinedResultWriter = new CsvFileWriter(combinedFileName);
+    combinedResultWriter = new CsvFileWriter(outputFile);
   }
 
   public void benchmarkAllSorts(int[] someNumbers) throws IOException
@@ -28,22 +24,13 @@ public class SortBenchmarker
     NumberSorter bubbleSorter = new BubbleSort();
     Long bubbleTime = benchmarkSort(bubbleSorter, someNumbers);
     String[] results = {"" + someNumbers.length, bubbleTime.toString()};
-    if (someNumbers.length < 1000)
-    {
-      lowResultWriter.WriteResults(results);
-    }
-    else
-    {
-      highResultWriter.WriteResults(results);
-    }
+
     combinedResultWriter.WriteResults(results);
   }
 
   private void WriteHeaderForResultFiles() throws IOException
   {
     String[] header = {"numbers sorted", "bubble sort time (ns)"};
-    lowResultWriter.WriteHeader(header);
-    highResultWriter.WriteHeader(header);
     combinedResultWriter.WriteHeader(header);
   }
 
