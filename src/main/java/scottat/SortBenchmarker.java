@@ -1,6 +1,7 @@
-package scottat;
+package main.java.scottat;
 
-import Sorting.*;
+import main.java.Sorting.BubbleSort;
+import main.java.Sorting.NumberSorter;
 
 import java.io.IOException;
 

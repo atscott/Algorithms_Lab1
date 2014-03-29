@@ -1,4 +1,4 @@
-package Sorting;
+package main.java.Sorting;
 
 
 /**

@@ -1,6 +1,5 @@
-package scottat;
+package main.java.scottat;
 
-import Sorting.*;
 
 import java.io.IOException;
 import java.util.ArrayList;

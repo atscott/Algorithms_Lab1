@@ -1,4 +1,4 @@
-package scottat;
+package main.java.scottat;
 
 /**
  * User: atscott
