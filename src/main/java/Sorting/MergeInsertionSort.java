@@ -7,14 +7,14 @@ import java.util.Arrays;
  */
 public class MergeInsertionSort implements NumberSorter
 {
-  public void Sort(int[] listOfNumbers)
+  public void sort(int[] listOfNumbers)
   {
     if (listOfNumbers.length > 1)
     {
       if (listOfNumbers.length < 50)
       {
         NumberSorter sorter = new InsertionSort();
-        sorter.Sort(listOfNumbers);
+        sorter.sort(listOfNumbers);
       } else
       {
         int q = listOfNumbers.length / 2;
@@ -22,8 +22,8 @@ public class MergeInsertionSort implements NumberSorter
         int[] leftArray = Arrays.copyOfRange(listOfNumbers, 0, q);
         int[] rightArray = Arrays.copyOfRange(listOfNumbers, q, listOfNumbers.length);
 
-        Sort(leftArray);
-        Sort(rightArray);
+        sort(leftArray);
+        sort(rightArray);
 
         merge(listOfNumbers, leftArray, rightArray);
       }

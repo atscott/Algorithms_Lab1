@@ -8,61 +8,48 @@ import java.util.Arrays;
  * Time: 1:28 PM
  * http://www.vogella.com/tutorials/JavaAlgorithmsMergesort/article.html
  */
-public class MergeSort implements NumberSorter
-{
-  public void Sort(int[] listOfNumbers)
-  {
-    if (listOfNumbers.length > 1)
-    {
+public class MergeSort implements NumberSorter {
+  public void sort(int[] listOfNumbers) {
+    if (listOfNumbers.length > 1) {
 
       int q = listOfNumbers.length / 2;
 
-      int[] leftArray = Arrays.copyOfRange(listOfNumbers, 0, q);
-      int[] rightArray = Arrays.copyOfRange(listOfNumbers, q, listOfNumbers.length);
+      final int[] leftArray = Arrays.copyOfRange(listOfNumbers, 0, q);
+      final int[] rightArray = Arrays.copyOfRange(listOfNumbers, q, listOfNumbers.length);
 
-      Sort(leftArray);
-      Sort(rightArray);
+     sort(leftArray);
+      sort(rightArray);
 
       merge(listOfNumbers, leftArray, rightArray);
     }
   }
 
-  private void merge(int[] a, int[] l, int[] r)
-  {
+  protected void merge(int[] a, int[] l, int[] r) {
     int totElem = l.length + r.length;
     //int[] a = new int[totElem];
     int i, li, ri;
     i = li = ri = 0;
-    while (i < totElem)
-    {
-      if ((li < l.length) && (ri < r.length))
-      {
-        if (l[li] < r[ri])
-        {
+    while (i < totElem) {
+      if ((li < l.length) && (ri < r.length)) {
+        if (l[li] < r[ri]) {
           a[i] = l[li];
           i++;
           li++;
-        } else
-        {
+        } else {
           a[i] = r[ri];
           i++;
           ri++;
         }
-      } else
-      {
-        if (li >= l.length)
-        {
-          while (ri < r.length)
-          {
+      } else {
+        if (li >= l.length) {
+          while (ri < r.length) {
             a[i] = r[ri];
             i++;
             ri++;
           }
         }
-        if (ri >= r.length)
-        {
-          while (li < l.length)
-          {
+        if (ri >= r.length) {
+          while (li < l.length) {
             a[i] = l[li];
             li++;
             i++;

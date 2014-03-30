@@ -7,7 +7,7 @@ package main.java.Sorting;
 public class BubbleSort implements NumberSorter
 {
   @Override
-  public void Sort(int[] listOfNumbers)
+  public void sort(int[] listOfNumbers)
   {
     int temp;
 
