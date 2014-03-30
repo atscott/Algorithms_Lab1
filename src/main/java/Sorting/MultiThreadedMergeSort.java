@@ -6,8 +6,8 @@ import java.util.Arrays;
  * Created by atscott on 3/29/2014.
  */
 public class MultiThreadedMergeSort extends MergeSort {
-  private int threadCount;
-  private int maxThreads = 2;
+  protected int threadCount;
+  protected int maxThreads = 2;
 
   public void setMaxThreads(int threads) {
     maxThreads = threads;
@@ -18,7 +18,7 @@ public class MultiThreadedMergeSort extends MergeSort {
     doSort(listOfNumbers);
   }
 
-  private void doSort(int[] listOfNumbers) {
+  protected void doSort(int[] listOfNumbers) {
     if (listOfNumbers.length > 1) {
 
       int q = listOfNumbers.length / 2;
@@ -45,7 +45,7 @@ public class MultiThreadedMergeSort extends MergeSort {
     }
   }
 
-  private void sortInThreads(final int[] leftArray, final int[] rightArray) {
+  protected void sortInThreads(final int[] leftArray, final int[] rightArray) {
     Thread left = new Thread() {
       public void run() {
         doSort(leftArray);
